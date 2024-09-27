@@ -2,11 +2,9 @@ package org.example.proyectocalculadora;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
-import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
-
-import java.awt.event.ActionEvent;
+import javafx.event.ActionEvent;
 
 public class HelloController {
     @FXML
@@ -31,7 +29,6 @@ public class HelloController {
     private TextField txtResult;
 
     // Event Listener on Button.onAction
-    @FXML
     public void calcular(ActionEvent event) {
         try {
             double op1 = Double.parseDouble(this.txtOp1.getText());

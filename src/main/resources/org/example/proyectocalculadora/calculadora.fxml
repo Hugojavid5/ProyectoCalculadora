@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.example.proyectocalculadora.HelloController">
    <children>
       <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="55.0" prefWidth="600.0" text="CALCULADORA" />
       <HBox prefHeight="63.0" prefWidth="542.0">
@@ -22,13 +25,20 @@
             <TextField fx:id="txtOp2" prefHeight="63.0" prefWidth="299.0" />
          </children>
       </HBox>
-      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="43.0" prefWidth="625.0" text="CALCULAR" />
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="43.0" prefWidth="625.0">
+         <graphic>
+            <Button mnemonicParsing="false" onAction="#calcular" text="Calcular" />
+         </graphic></Label>
       <FlowPane prefHeight="61.0" prefWidth="554.0">
          <children>
-            <RadioButton fx:id="rb_sumar" mnemonicParsing="false" text="Sumar" />
-            <RadioButton fx:id="rb_restar" mnemonicParsing="false" text="Restar" />
-            <RadioButton fx:id="rb_multiplicar" mnemonicParsing="false" text="Multiplicar" />
-            <RadioButton fx:id="rb_dividir" mnemonicParsing="false" prefHeight="5.0" prefWidth="70.0" text="Dividir" />
+            <RadioButton fx:id="rb_sumar" contentDisplay="CENTER" mnemonicParsing="false" text="Sumar">
+               <toggleGroup>
+                  <ToggleGroup fx:id="radioButton" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rb_restar" contentDisplay="CENTER" mnemonicParsing="false" text="Restar" toggleGroup="$radioButton" />
+            <RadioButton fx:id="rb_multiplicar" contentDisplay="CENTER" mnemonicParsing="false" text="Multiplicar" toggleGroup="$radioButton" />
+            <RadioButton fx:id="rb_dividir" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="5.0" prefWidth="70.0" text="Dividir" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" toggleGroup="$radioButton" />
          </children>
       </FlowPane>
       <HBox prefHeight="63.0" prefWidth="542.0">

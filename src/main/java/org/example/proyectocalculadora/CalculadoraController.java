@@ -10,31 +10,51 @@ import javafx.event.ActionEvent;
  * Controlador de la calculadora.
  * Maneja la lógica de la interfaz gráfica para realizar operaciones matemáticas básicas.
  */
-public class HelloController {
-
+public class CalculadoraController {
+    /**
+     * RadioButton para seleccionar la operación de división.
+     */
     @FXML
     private RadioButton rb_dividir;
 
+    /**
+     * RadioButton para seleccionar la operación de multiplicación.
+     */
     @FXML
     private RadioButton rb_multiplicar;
 
+    /**
+     * RadioButton para seleccionar la operación de resta.
+     */
     @FXML
     private RadioButton rb_restar;
 
+    /**
+     * RadioButton para seleccionar la operación de suma.
+     */
     @FXML
     private RadioButton rb_sumar;
 
+    /**
+     * Campo de texto para ingresar el primer operando.
+     */
     @FXML
     private TextField txtOp1;
 
+    /**
+     * Campo de texto para ingresar el segundo operando.
+     */
     @FXML
     private TextField txtOp2;
 
+    /**
+     * Campo de texto para mostrar el resultado de la operación.
+     */
     @FXML
     private TextField txtResult;
 
     /**
-     * Método que realiza el cálculo basado en la operación seleccionada.
+     * Metodo que realiza el cálculo basado en la operación seleccionada.
      * Se activa al presionar el botón de calcular.
      * @param event Evento que representa la acción de hacer clic en el botón calcular.
      */

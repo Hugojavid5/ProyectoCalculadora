@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="org.example.proyectocalculadora.HelloController">
+      fx:controller="org.example.proyectocalculadora.CalculadoraController">
    <children>
       <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="55.0" prefWidth="600.0" text="CALCULADORA" />
       <HBox prefHeight="63.0" prefWidth="542.0">
